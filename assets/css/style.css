@@ -1,0 +1,35 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+}
+header {
+  background: #21225f;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+nav a {
+  color: #fff;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+.cta {
+  display: inline-block;
+  background: #ffb703;
+  color: #21225f;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+footer {
+  background: #21225f;
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
