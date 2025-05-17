@@ -19,13 +19,17 @@
     }
 
     header {
+      display: flex;
       background: #1e1e2f;
       color: #ffffff;
       padding: 20px;
       text-align: center;
       animation: fadeInDown 1s ease-in-out;
     }
-
+    .csi-logo{
+      width:90px;
+      height:40px;
+    }
     nav {
       display: flex;
       flex-wrap: wrap;
@@ -102,10 +106,10 @@
 
     .events {
       display: flex; 
-      flex-direction: column;
+      flex-direction: row;
       flex-wrap: wrap;
       gap: 20px;
-      justify-content: left;
+      justify-content: center;
     }
 
     .contact-form input,
@@ -202,8 +206,11 @@
 </head>
 <body>
   <header>
+    <img src="https://www.csipict.in/assets/bgCSILogo-a8e0ce5f.png" class="csi-logo">
+    <div>
     <h1>PICT CSI Club</h1>
     <p>Computer Society of India - PICT Chapter</p>
+    </div>
   </header>
 
   <nav>
