@@ -1,30 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PICT CSI Hackathon 2025</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PICT CSI Club</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: #0a0a0a;
+      color: #f0f0f0;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: #1e1e2f;
+      color: #ffffff;
+      padding: 20px;
+      text-align: center;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background: #121220;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    nav a {
+      color: #ffffff;
+      padding: 15px 20px;
+      text-decoration: none;
+      display: block;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background: #29294d;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://picsum.photos/1200/400?grayscale') center/cover no-repeat;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 4px #000;
+      text-align: center;
+      padding: 20px;
+      animation: zoomIn 1.5s ease-in-out;
+    }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .section h2 {
+      margin-bottom: 20px;
+      color: #61dafb;
+    }
+
+    .team {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .member {
+      background: #1c1c2b;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
+      width: 250px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .member:hover {
+      transform: translateY(-5px);
+    }
+    
+    .member img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    .events {
+      display: flex; 
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: left;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #333;
+      border-radius: 4px;
+      background: #121220;
+      color: #f0f0f0;
+    }
+
+    .contact-form button {
+      background: #61dafb;
+      color: #000;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: #21a1f1;
+    }
+
+    footer {
+      background: #121220;
+      color: #999;
+      text-align: center;
+      padding: 15px 10px;
+      margin-top: 40px;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes zoomIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        padding: 10px;
+        font-size: 14px;
+      }
+
+      .hero {
+        height: 200px;
+        font-size: 16px;
+      }
+
+      .member {
+        width: 90%;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>PICT CSI Hackathon 2025</h1>
-    <nav>
-      <a href="about.html">About</a>
-      <a href="schedule.html">Schedule</a>
-      <a href="prizes.html">Prizes</a>
-      <a href="register.html">Register</a>
-      <a href="faq.html">FAQ</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <h1>PICT CSI Club</h1>
+    <p>Computer Society of India - PICT Chapter</p>
   </header>
-  <section>
-    <h2>Welcome to the Hackathon!</h2>
-    <p>Join us for 24 hours of coding, creativity, and fun. Open to all students!</p>
-    <a href="register.html" class="cta">Register Now</a>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#team">Team</a>
+    <a href="#events">Events</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="hero">
+    <h2>Empowering Innovators of Tomorrow</h2>
+  </div>
+
+  <section class="section" id="about">
+    <h2>About Us</h2>
+    <p>The CSI Student Chapter at PICT fosters learning, development, and innovation in the field of computer science and information technology. We organize workshops, hackathons, and guest lectures to empower students.</p>
   </section>
+
+  <section class="section" id="team">
+    <h2>Our Team</h2>
+    <div class="team">
+      <div class="member">
+        <img src="https://www.csipict.in/TeamsImg/AdnanPatel.jpeg" alt="President" />
+        <h3>Adnan Patel</h3>
+        <p>President</p>
+      </div>
+      <div class="member">
+        <img src="https://www.csipict.in/TeamsImg/NamanLabhsetwar.jpg" alt="Vice President" />
+        <h3>Naman Labhsetwar</h3>
+        <p>Vice President</p>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="team">
+    <h2>Events</h2>
+    <div class="Events">
+      <div class="member">
+        <img src="https://www.pcsbxenia.in/eventsImg/2.png" alt="President" />
+        <h3>Hack-O-Warts</h3>
+        <p>Showcase your web, app, or ML development skills in this thrilling hackathon!</p>
+      </div>
+      <div class="member">
+        <img src="https://www.pcsbxenia.in/eventsImg/1.png" alt="Vice President" />
+        <h3>Coder's Chamber</h3>
+        <p>Compete in a multi-round coding contest with your choice of programming language.</p>
+      </div>
+    </div>
+  </section>
+
+ 
+
+  <section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
   <footer>
-    &copy; 2025 PICT CSI Club
+    <p>&copy; 2025 PICT CSI Club. All rights reserved.</p>
   </footer>
 </body>
 </html>
