@@ -22,25 +22,29 @@
       display: flex;
       background: #1e1e2f;
       color: #ffffff;
-      padding: 20px;
+      justify-content: space-between;
+      position:sticky;
+      top:0;
+      padding: 15px;
+      align-items: center;
       text-align: center;
       animation: fadeInDown 1s ease-in-out;
     }
     .csi-logo{
       width:90px;
       height:40px;
+      margin-left:10px;
     }
     nav {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      background: #121220;
       animation: fadeIn 1.5s ease-in-out;
     }
 
     nav a {
       color: #ffffff;
-      padding: 15px 20px;
+      padding: 10px 25px;
       text-decoration: none;
       display: block;
       transition: background 0.3s;
@@ -208,17 +212,13 @@
   <header>
     <img src="https://www.csipict.in/assets/bgCSILogo-a8e0ce5f.png" class="csi-logo">
     <div>
-    <h1>PICT CSI Club</h1>
-    <p>Computer Society of India - PICT Chapter</p>
-    </div>
-  </header>
-
-  <nav>
+    <nav>
     <a href="#about">About</a>
-    <a href="#team">Team</a>
-    <a href="#events">Events</a>
-    <a href="#contact">Contact</a>
-  </nav>
+      <a href="#team">Team</a>
+      <a href="#events">Events</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
   <div class="hero">
     <h2>Empowering Innovators of Tomorrow</h2>
@@ -246,7 +246,7 @@
   </section>
   <section class="section" id="team">
     <h2>Events</h2>
-    <div class="Events">
+    <div class="Events" id="events">
       <div class="member">
         <img src="https://www.pcsbxenia.in/eventsImg/2.png" alt="President" />
         <h3>Hack-O-Warts</h3>
